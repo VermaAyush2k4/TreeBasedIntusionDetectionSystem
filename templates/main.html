@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intrusion Detection System</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Website Title -->
+
+    <div class="container">
+        <img src="{{ url_for('static', filename='NITK_Emblem.png') }}" alt="Intrusion Detection System Image" class="logo">
+        <h2 class='container-heading'><span class="heading_font">Network Based Intrusion Detection System</span></h2>
+        <h3 class='subheading_font'>Made by Aryaman Surya(211IT011), Vaidaant Thakur(211IT075), Verma Ayush(211IT079) </h3>
+        <div class='description'>
+            <p>Developing an intrusion detection system leveraging ensemble learning techniques such as Random Forest, Extra Trees, and XGBoost to enhance detection accuracy and robustness</p><br>
+            
+        </div>
+    </div>
+
+    <!-- Text Area -->
+    <div class="ml-container">
+        <form action="{{ url_for('predict')}}" method="POST">
+    
+            <label for="bwdPacketLengthStd">Backward Packet Length Standard Deviation:</label>
+            <input type="text" id="bwdPacketLengthStd" name="bwdPacketLengthStd" placeholder=""><br>
+    
+            <label for="bwdPacketLengthMin">Backward Packet Length Minimum:</label>
+            <input type="text" id="bwdPacketLengthMin" name="bwdPacketLengthMin" placeholder=""><br>
+    
+            <label for="averagePacketSize">Average Packet Size:</label>
+            <input type="text" id="averagePacketSize" name="averagePacketSize" placeholder=""><br>
+    
+            <label for="initWinbytesbackward">Initial Window Bytes Backward:</label>
+            <input type="text" id="initWinbytesbackward" name="initWinbytesbackward" placeholder=""><br>
+    
+            <label for="initWinbytesforward">Initial Window Bytes Forward:</label>
+            <input type="text" id="initWinbytesforward" name="initWinbytesforward" placeholder=""><br>
+    
+            <label for="pSHFlagCount">PSH Flag Count:</label>
+            <input type="text" id="pSHFlagCount" name="pSHFlagCount" placeholder=""><br>
+    
+            <label for="bwdPackets">Backward Packets per Second:</label>
+            <input type="text" id="bwdPackets" name="bwdPackets" placeholder=""><br>
+    
+            <label for="avgBwdSegmentSize">Average Backward Segment Size:</label>
+            <input type="text" id="avgBwdSegmentSize" name="avgBwdSegmentSize" placeholder=""><br>
+    
+            <label for="packetLengthStd">Packet Length Standard Deviation:</label>
+            <input type="text" id="packetLengthStd" name="packetLengthStd" placeholder=""><br>
+    
+            <label for="bwdPacketLengthMean">Backward Packet Length Mean:</label>
+            <input type="text" id="bwdPacketLengthMean" name="bwdPacketLengthMean" placeholder=""><br>
+    
+            <label for="fwdHeaderLength">Forward Header Length:</label>
+            <input type="text" id="fwdHeaderLength" name="fwdHeaderLength" placeholder=""><br>
+    
+            <label for="packetLengthMean">Packet Length Mean:</label>
+            <input type="text" id="packetLengthMean" name="packetLengthMean" placeholder=""><br>
+    
+            <label for="bwdHeaderLength">Backward Header Length:</label>
+            <input type="text" id="bwdHeaderLength" name="bwdHeaderLength" placeholder=" "><br>
+    
+    
+            <label for="minsegsizeforward">Minimum Segment Size Forward:</label>
+            <input type="text" id="minsegsizeforward" name="minsegsizeforward" placeholder=" "><br>
+
+            <label for="actdatapktfwd">Active Data Packets Forward:</label>
+            <input type="text" id="actdatapktfwd" name="actdatapktfwd" placeholder=" "><br>
+
+            <label for="selectModel">Select Model</label>
+            <select id="selectModel" name="selectModel">
+          <option selected>----select option----</option>
+          <option value="0" selected>Decision Trees</option>
+          <option value="1">Extra Trees</option>
+          <option value="2">Random Forest</option>
+          <option value="3">Xg boost</option>
+          </select><br>
+
+            <input type="submit" class="my-cta-button" value="Predict">
+        </form>
+    </div>
+    
+
+    <!-- Footer -->
+    <div class='footer'>
+        <p class='footer-description'>Made by Aryaman Surya(211IT011), Vaidaant Thakur(211IT075), Verma Ayush(211IT079)</p>
+    </div>
+
+</body>
+
+</html>

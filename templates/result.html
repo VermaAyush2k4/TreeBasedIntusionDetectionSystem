@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intrusion detection System</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='diabetes-favicon.ico') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style2.css') }}">
+    <script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container">
+        <img src="{{ url_for('static', filename='NITK_Emblem.png') }}" alt="Intrusion Detection System Image" class="logo">
+        <p>In this result we take input from the user and then we predict the results</p>
+        <h2 class='container-heading'><span class="heading_font">Network Based Intrusion Detection System</span></h2><br>
+        <div class='description'>
+            <p>Developing an intrusion detection system leveraging ensemble learning techniques such as Random Forest, Extra Trees, and XGBoost to enhance detection accuracy and robustness</p><br>
+            <p>
+                
+            </p>
+        </div>
+    </div>
+
+    <!-- Result -->
+
+    <div class="results">
+        
+    <div class="results2">
+        <h3 style="padding : 0px; margin : 5px; color:black;">Project Implemented by Aryaman Surya, Vaidaant Thakur, Verma Ayush</h3>
+        <h3 style="padding : 0px;  margin : 5px;color : green">Under the guidance of Dr Jaidhar C.D </h3>
+        <h5 style="padding : 0px ;  margin : 5px; color : green">(Associate Professor, IT Department NITK)</h5>
+
+    </div>
+       
+        {% if prediction == 0%}
+        <h1>CLass label 0 Label Name:BENIGN </h1>
+        <h2>Refers to normal, non-malicious network traffic or behavior. In terms of Intrusion Detection Systems (IDS), benign traffic serves as a baseline for comparison against potentially malicious activities, helping to distinguish between harmless and harmful behavior.</h2>
+        {% endif %} {% if prediction == 1%}
+        <h1>CLass label 1 Label Name:Bot </h1>
+        <h2>A type of malicious software designed to remotely control infected computers for various malicious activities. IDS detects botnet activities by monitoring for patterns such as unusual communication patterns, mass data transfers, or connections to known botnet command and control servers.</h2>
+        {% endif %} {% if prediction == 2%}
+        <h1>CLass label 2 Label Name:BruteForce  </h1>
+        <h2>An attack method where an attacker systematically tries all possible combinations of passwords or encryption keys to gain unauthorized access to a system. IDS can detect brute force attacks by analyzing repeated login attempts or excessive failed authentication requests within a short period.</h2>
+        {% endif %} {% if prediction == 3%}
+        <h1>CLass label 3 Label Name:Dos </h1>
+        <h2>A cyberattack aimed at disrupting the normal functioning of a network or system by overwhelming it with a flood of illegitimate traffic or requests. IDS identifies DoS attacks by monitoring for sudden spikes in traffic volume or patterns indicative of flooding.</h2>
+        {% endif %} {% if prediction == 4%}
+        <h1>CLass label 4 Label Name:Infiltration </h1>
+        <h2>The unauthorized entry or penetration into a network or system by an attacker. IDS detects infiltration attempts by analyzing anomalies in network traffic, such as unexpected connections or suspicious data transmissions, that may indicate an intruder trying to gain access.</h2>
+        {% endif %} {% if prediction == 5%}
+        <h1>CLass label 5 Label Name:PortScan </h1>
+        <h2>An attempt by an attacker to discover open ports and services on a target system for potential exploitation. IDS can detect port scans by monitoring for sequential or random connection attempts to multiple ports from a single source, which may indicate reconnaissance activity.</h2>
+        {% endif %} {% if prediction == 6%}
+        <h1>CLass label 6 Label Name:WebAttack </h1>
+        <h2>A cyberattack targeting web applications or services to exploit vulnerabilities and gain unauthorized access or cause damage. IDS detects web attacks by analyzing HTTP requests and responses for suspicious patterns or known attack signatures, such as SQL injection attempts or cross-site scripting (XSS) attacks.</h2>
+        {% endif %}
+
+</body>
+
+</html>
