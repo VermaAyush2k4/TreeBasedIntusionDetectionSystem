@@ -1,0 +1,2 @@
+bwdPacketLengthStd,bwdPacketLengthMin,averagePacketSize,initWinbytesbackward,initWinbytesforward,pSHFlagCount,bwdPackets,avgBwdSegmentSize,packetLengthStd,bwdPacketLengthMean,fwdHeaderLength,packetLengthMean,bwdHeaderLength,minsegsizeforward,actdatapktfwd
+14,3,34,3.4,4.5,8,9,0,71,1.23,12,23,34,45,1
