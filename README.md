@@ -41,7 +41,9 @@ Output webpages:
 ![WhatsApp Image 2024-03-20 at 1 50 38 AM (3)](https://github.com/VermaAyush2k4/TreeBasedIntusionDetectionSystem/assets/117018341/8a80136a-ddde-4a4d-842a-34a67b279afe)
 
 Software Tools: VSCode,pycharm,python latest version should be installed
+
 Requriements: present in requirements.txt
+
 Open folder in any of software tools(mentioned above) and then run app.py and appa.py you will get results.
 
 
